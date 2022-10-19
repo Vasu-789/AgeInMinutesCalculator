@@ -1,99 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
     android:background="@color/bgColor"
-    android:gravity="center_horizontal"
-    android:padding="16dp"
-    >
+    tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="CALCULATE YOUR"
-        android:textColor="@color/textColor"
-        android:textSize="25sp"
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="46dp"
+        android:background="@color/cyberYellow"
+        android:gravity="center"
+        android:text="CALCULATE YOUR AGE IN"
+        android:textAlignment="gravity"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         android:textStyle="bold"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/typeTimeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/typeTimeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="@color/btnBgColor"
         android:text="Minutes"
-        android:backgroundTint="@color/jonquil"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="AGE"
-        android:padding="10dp"
-
-        android:background="@color/textBg"
-        android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold"
-        />
-
-    <TextView
-        android:id="@+id/tvInMinutes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="In Minutes"
-        android:textColor="@color/textColor"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        app:layout_constraintBottom_toTopOf="@+id/btnDatePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/btnDatePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SELECT DATE"
-        android:textSize="18sp"
-        android:textColor="@color/lavenderBlush"
-        android:backgroundTint="@color/btnBgColor"/>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="27dp"
+        android:backgroundTint="@color/cyberYellow"
+        android:text="Select Date"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvSelectedDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeTimeButton" />
 
     <TextView
         android:id="@+id/tvSelectedDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/textColor"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvSelectedDateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/lavenderBlush"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:text="dd/MM/yyyy"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAgeInMinutes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDatePicker" />
 
     <TextView
         android:id="@+id/tvAgeInMinutes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/textColor"
-        android:textSize="35sp"
-        android:textStyle="bold" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="0000"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAgeInMinutesText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectedDate" />
 
     <TextView
         android:id="@+id/tvAgeInMinutesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/lavenderBlush"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-</LinearLayout>
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="191dp"
+        android:gravity="center"
+        android:text="Minutes"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgeInMinutes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,8 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="textColor">#301A4B</color>
-    <color name="bgColor">#6DB1BF</color>
-    <color name="btnBgColor">#F39A9D</color>
+    <color name="bgColor">#AE7CF4</color>
+    <color name="btnBgColor">#91C4F2</color>
     <color name="textBg">#3F6C51</color>
     <color name="ashGrey">#B8C4BB</color>
     <color name="lavenderBlush">#FFEAEC</color>
@@ -17,5 +17,9 @@
     <color name="jonquil">#F9C80E</color>
     <color name="orangeRed">#F86624</color>
     <color name="imperialRed">#EA3546</color>
+    <color name="cyberYellow">#FFCF00</color>
+    <color name="russianViolet">#330151</color>
+    <color name="darkByzantium">#694966</color>
+    <color name="pastelPink">#F8A0A0</color>
 
 </resources>

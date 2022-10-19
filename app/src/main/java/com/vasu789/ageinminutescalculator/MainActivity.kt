@@ -16,9 +16,8 @@ class MainActivity : AppCompatActivity() {
     private var tvAgeInMinutes : TextView? = null
     private var tvSelectedDateText : TextView? = null
     private var tvAgeInMinutesText : TextView? = null
-    private var tvInMinutes : TextView? = null
     private var triFlag : Int = 1
-    private var typeText : String? = null
+    private var typeText : String? = "Minutes"
     private var timeInMinutes : Long? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,24 +25,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val typeTimeButton : Button = findViewById(R.id.typeTimeButton)
-        tvInMinutes = findViewById(R.id.tvInMinutes)
         tvAgeInMinutes = findViewById(R.id.tvAgeInMinutes)
         tvAgeInMinutesText = findViewById(R.id.tvAgeInMinutesText)
         typeTimeButton.setOnClickListener{
             typeText = checkTriFlagText()
             typeTimeButton.text = typeText
-            tvInMinutes?.text = "In $typeText"
             if(timeInMinutes != null)
             {
                 tvAgeInMinutes?.text = (timeInMinutes!! / getTypeTimeDivider()).toString()
-                tvAgeInMinutesText?.text = "Age In $typeText"
             }
+            tvAgeInMinutesText?.text = "$typeText"
             //Toast.makeText(this, "Working", Toast.LENGTH_SHORT).show()
         }
 
         val btnDatePicker : Button = findViewById(R.id.btnDatePicker)
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
-        tvSelectedDateText = findViewById(R.id.tvSelectedDateText)
         btnDatePicker.setOnClickListener{
             clickDatePicker()
         }
@@ -99,7 +95,7 @@ class MainActivity : AppCompatActivity() {
                         val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
                         timeInMinutes = differenceInMinutes
                         tvAgeInMinutes?.text = (timeInMinutes!! / getTypeTimeDivider()).toString()
-                        tvAgeInMinutesText?.text = "Age In $typeText"
+                        tvAgeInMinutesText?.text = "$typeText"
                     }
                 }
 
